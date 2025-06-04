@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body{
+            background-color: #384047;
+            font-family: sans-serif;
+            height: auto;
+            overflow-y: scroll;
+            
+            
+        }
+        form{
+            background-color: #fff;
+            padding: 4em 4em 2em;
+            max-width: 400px;
+            margin: 20px auto 0;
+            box-shadow: 0 0 1em #222;
+            border-radius: 5px;
+            text-shadow: 0 1px #68B25B;
+            
+        }
+        h1{
+            text-align: center;
+            font-size: xx-large;
+        }
+        p{
+            margin: 0 0 1.5em 0;
+            position: relative;
+        }
+        label{
+            
+            font-size: 1.4em;
+            margin: 0 0 0.5em;
+        }
+        button{
+            min-height: 40px;
+            width: 100%;
+            max-width: 400px;
+            background-color: darkslateblue;
+            border-radius: 5px;
+            color: white;
+            font-family: sans-serif;
+            font-weight: bold;
+        }
+        input:not(.male):not(.female):not(.other),select{
+            min-width: 400px;
+            min-height: 25px;
+            border: 5px;
+            border: 2px solid black;
+        }
+
+        @media (max-width: 480px) {
+form {
+    padding: 4em 4em 2em;
+    margin: 20px auto 0;
+    width: 80%;
+    box-shadow: 0 0 1em #222;
+    border-radius: 5px;
+    text-shadow: 0 1px #68B25B;
+  }
+
+  input:not(.male):not(.female):not(.other),
+  select,
+  button {
+    width: 100%;
+    min-width: auto;
+  }
+
+  h1 {
+    font-size: 1.4em;
+  }
+  body{
+    background-color: #384047;
+    font-family: sans-serif;
+    height: auto;
+    overflow-y: scroll;
+  } 
+}
+#thanksmsg{
+    display:none; 
+    text-align:center; 
+    margin-top:20px; 
+    font-size:1.5em; 
+    color: green;
+    background-color: #fff;
+    width: 180px;
+    height: 100px;
+    border-radius: 5px;
+    box-shadow: 0 0 1em #222;
+    text-shadow: 0 1px #68B25B;
+    padding: 4em 4em 2em;
+    margin: 20px auto 0;
+  }
+
+
+    </style>
+</head>
+<body>
+    <form action="mccm.php" method="post" id="myform">
+        <h1>Registration Form (M.A.C.C.M)</h1>
+        <fieldset>
+            <p>
+            <label for="">Your Name:</label> <br>
+            <input type="text" name="your_name" required>
+        </p>
+        <p>
+            <label for="">Father Name:</label><br>
+            <input type="text" name="father_name" required>
+        </p>
+        <p>
+            <label for="">Class:</label>
+            <select name="class_selt" id="class_selt" required>
+                <option value="">--Select Class--</option>
+                <option value="class-6">Class-6</option>
+                <option value="class-7">Class-7</option>
+                <option value="class-8">Class-8</option>
+                <option value="class-9">Class-9</option>
+                <option value="class-10">Class-10</option>
+                <option value="class-11">Class-11</option>
+                <option value="class-12">Class-12</option>
+            </select>
+        </p>
+        <p>
+            <label for="">Batch Year (month,yr):</label><br>
+            <input type="month" name="monthYear" required>
+        </p>
+        <P>
+            <label for="">Gender:</label><br>
+
+            <input type="radio" class="male" id="male" name="gender" value="M">
+            <label for="male">Male</label>
+
+            <input type="radio" class="female" id="female" name="gender" value="F">
+            <label for="female">Female</label>
+
+            <input type="radio" class="other" id="other" name="gender" value="O">
+            <label for="other">Other</label>
+        </P>
+        <p>
+            <label for="">State:</label><br>
+            <input type="text" name="state" required>
+        </p>
+
+        <p>
+            <label for="">District:</label><br>
+            <input type="text" name="district" required>
+        </p>
+
+        <p>
+            <label for="">Post-Office:</label><br>
+            <input type="text" name="post_office" required>
+        </p>
+        <p>
+            <label for="">Village:</label><br>
+            <input type="text" name="village" required>
+        </p>
+        <br>
+        <button type="submit">Submit</button>
+        </fieldset>
+
+    </form>
+
+    <div id="thanksmsg">
+        Thanks For Submitting The Form!
+    </div>
+</body>
+<script>
+    const x=document.getElementById("myform")
+    const y=document.getElementById("thanksmsg")
+    x.addEventListener("submit", f);
+    function f(event){
+       // event.preventDefault(); // page reload rok do
+        x.style.display = 'none'; // form hide karo
+        y.style.display = 'block'; // thanks message show karo
+    }
+</script>
+</html>
