@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz with Correct Answer Display</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      padding: 20px;
+    }
+    .hed{
+      background-color: #fff;
+      padding: 15px;
+      margin-bottom: 15px 0 15px;
+      border-radius: 8px;
+      box-shadow: 0 0 5px #aaa;
+    }
+    .question {
+      background-color: #fff;
+      padding: 15px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      box-shadow: 0 0 5px #aaa;
+    }
+    .correct-label {
+      color: green;
+      font-weight: bold;
+    }
+    .wrong-label {
+      color: red;
+      font-weight: bold;
+    }
+    .explanation {
+      margin-top: 5px;
+      font-style: italic;
+      color: #333;
+    }
+    #result {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    p{
+        font-size: x-large;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    button{
+            min-width: 100px;
+            height: 30px;
+            background-color: darkslateblue;
+            border-radius: 5px;
+            color:crimson;
+            font-family: sans-serif;
+            font-weight: bold;
+
+    }
+  </style>
+</head>
+<body>
+
+  <h1>MCQ Test</h1>
+  <div class="hed">
+    <p><img src="video/heading.png" alt=""></p>
+  </div>
+  <form id="quizForm">
+
+    <div class="question" id="q1">
+      <p><img src="video/q1.png" alt=""></p>
+      <h6>Note: graph is between displacement Vs distance*</h6>
+      <label><input type="radio" name="q1" value="a"> a</label><br>
+      <label><input type="radio" name="q1" value="b"> b</label><br>
+      <label><input type="radio" name="q1" value="c"> c</label><br>
+      <label><input type="radio" name="q1" value="d"> d</label><br>
+      <div class="explanation" style="display: none;"></div>
+    </div>
+
+    <div class="question" id="q2">
+      <p><img src="video/q2.png" alt=""></p>
+      <h6>Note: graph is between displacement Vs distance*</h6>
+      <label><input type="radio" name="q2" value="a"> a</label><br>
+      <label><input type="radio" name="q2" value="b"> b</label><br>
+      <label><input type="radio" name="q2" value="c"> c</label><br>
+      <label><input type="radio" name="q2" value="d"> d</label><br>
+      <div class="explanation" style="display: none;"></div>
+    </div>
+
+    <div class="question" id="q3">
+      <p><img src="video/q3.png" alt=""></p>
+      <label><input type="radio" name="q3" value="a"> a</label><br>
+      <label><input type="radio" name="q3" value="b"> b</label><br>
+      <label><input type="radio" name="q3" value="c"> c</label><br>
+      <label><input type="radio" name="q3" value="d"> d</label><br>
+      <div class="explanation" style="display: none;"></div>
+    </div>
+
+    <div class="question" id="q4">
+      <p><img src="video/q4.png" alt=""></p>
+      <label><input type="radio" name="q4" value="a"> a</label><br>
+      <label><input type="radio" name="q4" value="b"> b</label><br>
+      <label><input type="radio" name="q4" value="c"> c</label><br>
+      <label><input type="radio" name="q4" value="d"> d</label><br>
+      <div class="explanation" style="display: none;"></div>
+    </div>
+
+    <div class="question" id="q5">
+      <p><img src="video/q5.png" alt=""></p>
+      <label><input type="radio" name="q5" value="a"> a</label><br>
+      <label><input type="radio" name="q5" value="b"> b</label><br>
+      <label><input type="radio" name="q5" value="c"> c</label><br>
+      <label><input type="radio" name="q5" value="d"> d</label><br>
+      <div class="explanation" style="display: none;"></div>
+    </div>
+
+    <div class="question" id="q6">
+      <p><img src="video/q6.png" alt=""></p>
+      <label><input type="radio" name="q6" value="a"> a</label><br>
+      <label><input type="radio" name="q6" value="b"> b</label><br>
+      <label><input type="radio" name="q6" value="c"> c</label><br>
+      <label><input type="radio" name="q6" value="d"> d</label><br>
+      <div class="explanation" style="display: none;"></div>
+    </div>
+
+    <div class="question" id="q7">
+      <p><img src="video/q7.png" alt=""></p>
+      <label><input type="radio" name="q7" value="a"> a</label><br>
+      <label><input type="radio" name="q7" value="b"> b</label><br>
+      <label><input type="radio" name="q7" value="c"> c</label><br>
+      <label><input type="radio" name="q7" value="d"> d</label><br>
+      <div class="explanation" style="display: none;"></div>
+    </div>
+
+    <div class="question" id="q8">
+      <p><img src="video/q8.png" alt=""></p>
+      <label><input type="radio" name="q8" value="a"> a</label><br>
+      <label><input type="radio" name="q8" value="b"> b</label><br>
+      <label><input type="radio" name="q8" value="c"> c</label><br>
+      <label><input type="radio" name="q8" value="d"> d</label><br>
+      <div class="explanation" style="display: none;"></div>
+    </div>
+
+    <div class="question" id="q9">
+      <p><img src="video/q9.png" alt=""></p>
+      <label><input type="radio" name="q9" value="a"> a</label><br>
+      <label><input type="radio" name="q9" value="b"> b</label><br>
+      <label><input type="radio" name="q9" value="c"> c</label><br>
+      <label><input type="radio" name="q9" value="d"> d</label><br>
+      <div class="explanation" style="display: none;"></div>
+    </div>
+
+    <div class="question" id="q10">
+      <p><img src="video/q10.png" alt=""></p>
+      <label><input type="radio" name="q10" value="a"> a</label><br>
+      <label><input type="radio" name="q10" value="b"> b</label><br>
+      <label><input type="radio" name="q10" value="c"> c</label><br>
+      <label><input type="radio" name="q10" value="d"> d</label><br>
+      <div class="explanation" style="display: none;"></div>
+    </div>
+
+    <div class="question" id="q11">
+      <p><img src="video/q11.png" alt=""></p>
+      <label><input type="radio" name="q11" value="a"> a</label><br>
+      <label><input type="radio" name="q11" value="b"> b</label><br>
+      <label><input type="radio" name="q11" value="c"> c</label><br>
+      <label><input type="radio" name="q11" value="d"> d</label><br>
+      <div class="explanation" style="display: none;"></div>
+    </div>
+
+    <div class="question" id="q12">
+      <p><img src="video/q12.png" alt=""></p>
+      <label><input type="radio" name="q12" value="a"> a</label><br>
+      <label><input type="radio" name="q12" value="b"> b</label><br>
+      <label><input type="radio" name="q12" value="c"> c</label><br>
+      <label><input type="radio" name="q12" value="d"> d</label><br>
+      <div class="explanation" style="display: none;"></div>
+    </div>
+
+    <div class="question" id="q13">
+      <p><img src="video/q13.png" alt=""></p>
+      <label><input type="radio" name="q13" value="a"> a</label><br>
+      <label><input type="radio" name="q13" value="b"> b</label><br>
+      <label><input type="radio" name="q13" value="c"> c</label><br>
+      <label><input type="radio" name="q13" value="d"> d</label><br>
+      <div class="explanation" style="display: none;"></div>
+    </div>
+
+    <div class="question" id="q14">
+      <p><img src="video/q14.png" alt=""></p>
+      <label><input type="radio" name="q14" value="a"> a</label><br>
+      <label><input type="radio" name="q14" value="b"> b</label><br>
+      <label><input type="radio" name="q14" value="c"> c</label><br>
+      <label><input type="radio" name="q14" value="d"> d</label><br>
+      <div class="explanation" style="display: none;"></div>
+    </div>
+
+    <div class="question" id="q15">
+      <p><img src="video/q15.png" alt=""></p>
+      <label><input type="radio" name="q15" value="a"> a</label><br>
+      <label><input type="radio" name="q15" value="b"> b</label><br>
+      <label><input type="radio" name="q15" value="c"> c</label><br>
+      <label><input type="radio" name="q15" value="d"> d</label><br>
+      <div class="explanation" style="display: none;"></div>
+    </div>
+
+    <div class="question">
+        <p><img src="video/q(16-18).png" alt=""></p>
+    </div>
+
+    <div class="question" id="q16">
+      <p><img src="video/q16.png" alt=""></p>
+      <label><input type="radio" name="q16" value="a"> a</label><br>
+      <label><input type="radio" name="q16" value="b"> b</label><br>
+      <label><input type="radio" name="q16" value="c"> c</label><br>
+      <label><input type="radio" name="q16" value="d"> d</label><br>
+      <div class="explanation" style="display: none;"></div>
+    </div>
+
+    <div class="question" id="q17">
+      <p><img src="video/q17.png" alt=""></p>
+      <label><input type="radio" name="q17" value="a"> a</label><br>
+      <label><input type="radio" name="q17" value="b"> b</label><br>
+      <label><input type="radio" name="q17" value="c"> c</label><br>
+      <label><input type="radio" name="q17" value="d"> d</label><br>
+      <div class="explanation" style="display: none;"></div>
+    </div>
+
+
+    <div class="question" id="q18">
+      <p><img src="video/q18.png" alt=""></p>
+      <label><input type="radio" name="q18" value="a"> a</label><br>
+      <label><input type="radio" name="q18" value="b"> b</label><br>
+      <label><input type="radio" name="q18" value="c"> c</label><br>
+      <label><input type="radio" name="q18" value="d"> d</label><br>
+      <div class="explanation" style="display: none;"></div>
+    </div>
+
+    <div class="question">
+        <p><img src="video/q(19-21).png" alt=""></p>
+    </div>
+
+    <div class="question" id="q19">
+      <p><img src="video/q19.png" alt=""></p>
+      <label><input type="radio" name="q19" value="a"> a</label><br>
+      <label><input type="radio" name="q19" value="b"> b</label><br>
+      <label><input type="radio" name="q19" value="c"> c</label><br>
+      <label><input type="radio" name="q19" value="d"> d</label><br>
+      <div class="explanation" style="display: none;"></div>
+    </div>
+
+    <div class="question" id="q20">
+      <p><img src="video/q20.png" alt=""></p>
+      <label><input type="radio" name="q20" value="a"> a</label><br>
+      <label><input type="radio" name="q20" value="b"> b</label><br>
+      <label><input type="radio" name="q20" value="c"> c</label><br>
+      <label><input type="radio" name="q20" value="d"> d</label><br>
+      <div class="explanation" style="display: none;"></div>
+    </div>
+
+    <div class="question" id="q21">
+      <p><img src="video/q21.png" alt=""></p>
+      <label><input type="radio" name="q21" value="a"> a</label><br>
+      <label><input type="radio" name="q21" value="b"> b</label><br>
+      <label><input type="radio" name="q21" value="c"> c</label><br>
+      <label><input type="radio" name="q21" value="d"> d</label><br>
+      <div class="explanation" style="display: none;"></div>
+    </div>
+
+    <div class="question" id="q22">
+      <p><img src="video/q22.png" alt=""></p>
+      <label><input type="radio" name="q22" value="a"> a</label><br>
+      <label><input type="radio" name="q22" value="b"> b</label><br>
+      <label><input type="radio" name="q22" value="c"> c</label><br>
+      <label><input type="radio" name="q22" value="d"> d</label><br>
+      <div class="explanation" style="display: none;"></div>
+    </div>
+
+    <div class="question" id="q23">
+      <p><img src="video/q23.png" alt=""></p>
+      <label><input type="radio" name="q23" value="a"> a</label><br>
+      <label><input type="radio" name="q23" value="b"> b</label><br>
+      <label><input type="radio" name="q23" value="c"> c</label><br>
+      <label><input type="radio" name="q23" value="d"> d</label><br>
+      <div class="explanation" style="display: none;"></div>
+    </div>
+
+    <div class="question" id="q24">
+      <p><img src="video/q24.png" alt=""></p>
+      <label><input type="radio" name="q24" value="a"> a</label><br>
+      <label><input type="radio" name="q24" value="b"> b</label><br>
+      <label><input type="radio" name="q24" value="c"> c</label><br>
+      <label><input type="radio" name="q24" value="d"> d</label><br>
+      <div class="explanation" style="display: none;"></div>
+    </div>
+
+    <div class="question" id="q25">
+      <p><img src="video/q25.png" alt=""></p>
+      <label><input type="radio" name="q25" value="a"> a</label><br>
+      <label><input type="radio" name="q25" value="b"> b</label><br>
+      <label><input type="radio" name="q25" value="c"> c</label><br>
+      <label><input type="radio" name="q25" value="d"> d</label><br>
+      <div class="explanation" style="display: none;"></div>
+    </div>
+
+
+    <div class="question" id="q26">
+      <p><img src="video/q26.png" alt=""></p>
+      <label><input type="radio" name="q26" value="a"> a</label><br>
+      <label><input type="radio" name="q26" value="b"> b</label><br>
+      <label><input type="radio" name="q26" value="c"> c</label><br>
+      <label><input type="radio" name="q26" value="d"> d</label><br>
+      <div class="explanation" style="display: none;"></div>
+    </div>
+
+    <div class="question" id="q27">
+      <p><img src="video/q27.png" alt=""></p>
+      <label><input type="radio" name="q27" value="a"> a</label><br>
+      <label><input type="radio" name="q27" value="b"> b</label><br>
+      <label><input type="radio" name="q27" value="c"> c</label><br>
+      <label><input type="radio" name="q27" value="d"> d</label><br>
+      <div class="explanation" style="display: none;"></div>
+    </div>
+
+    <div class="question" id="q28">
+      <p><img src="video/q28.png" alt=""></p>
+      <label><input type="radio" name="q28" value="a"> a</label><br>
+      <label><input type="radio" name="q28" value="b"> b</label><br>
+      <label><input type="radio" name="q28" value="c"> c</label><br>
+      <label><input type="radio" name="q28" value="d"> d</label><br>
+      <div class="explanation" style="display: none;"></div>
+    </div>
+
+    <div class="question" id="q29">
+      <p><img src="video/q29.png" alt=""></p>
+      <label><input type="radio" name="q29" value="a"> a</label><br>
+      <label><input type="radio" name="q29" value="b"> b</label><br>
+      <label><input type="radio" name="q29" value="c"> c</label><br>
+      <label><input type="radio" name="q29" value="d"> d</label><br>
+      <div class="explanation" style="display: none;"></div>
+    </div>
+
+    <div class="question" id="q30">
+      <p><img src="video/q30.png" alt=""></p>
+      <label><input type="radio" name="q30" value="a"> a</label><br>
+      <label><input type="radio" name="q30" value="b"> b</label><br>
+      <label><input type="radio" name="q30" value="c"> c</label><br>
+      <label><input type="radio" name="q30" value="d"> d</label><br>
+      <div class="explanation" style="display: none;"></div>
+    </div>
+
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <div id="result"></div>
+
+  <script>
+    document.getElementById("quizForm").onsubmit = function(e) {
+      e.preventDefault();
+
+      const answers = {
+        q1: "c",
+        q2: "a",
+        q3: "c",
+        q4: "b",
+        q5: "c",
+        q6: "c",
+        q7: "b",
+        q8: "b",
+        q9: "c",
+        q10: "a",
+        q11: "d",
+        q12: "d",
+        q13: "c",
+        q14: "c",
+        q15: "d",
+        q16: "b",
+        q17: "a",
+        q18: "c",
+        q19: "b",
+        q20: "a",
+        q21: "c",
+        q22: "b",
+        q23: "d",
+        q24: "c",
+        q25: "d",
+        q26: "b",
+        q27: "c",
+        q28: "c",
+        q29: "c",
+        q30: "d",
+        
+       
+      };
+
+      let score = 0;
+      let total = Object.keys(answers).length;
+      let resultText = "";
+
+      for (let q in answers) {
+        const questionDiv = document.getElementById(q);
+        const explanation = questionDiv.querySelector(".explanation");
+        const selected = questionDiv.querySelector(`input[name="${q}"]:checked`);
+        const correct = answers[q];
+
+        let correctLabel = "";
+        let selectedLabel = "";
+
+        const options = questionDiv.querySelectorAll("input");
+
+        options.forEach(option => {
+          option.disabled = true; // disable all options
+          const label = option.parentElement;
+          label.classList.remove("correct-label", "wrong-label");
+          if (option.value === correct) correctLabel = option.value;
+        });
+
+        if (selected) {
+          if (selected.value === correct) {
+            score++;
+            selected.parentElement.classList.add("correct-label");
+            explanation.innerHTML ="Your Answer is Correct"
+            explanation.style.display = "block"; 
+          } else {
+            selected.parentElement.classList.add("wrong-label");
+            explanation.innerHTML = `Correct Answer: <b>${correct}</b>`;
+            explanation.style.display = "block";
+          }
+        } else {
+          explanation.innerHTML = `Correct Answer: <b>${correct}</b>`;
+          explanation.style.display = "block";
+          resultText += `<p>Question "${q}" not attempted.</p>`;
+        }
+      }
+
+      document.getElementById("result").innerHTML = `Your Score: ${score} / ${total}` + "<br>" + resultText;
+    };
+  </script>
+
+</body>
+</html>
