@@ -80,7 +80,7 @@ body {
     position: absolute;
     top: 100%;
     right: 0;
-    width: 40%;
+    width: 42%;
     height: 290px; /* 350px - 60px */
     background-color: #1a1a1a;
     flex-direction: column;
